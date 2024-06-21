@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Doctores</title>
+</head>
+<body>
+    <h1>Actualizar Doctor</h1>
+    {% for doctor in doctores %}
+    <form method="post" action="/doctores/modificar/">
+        <input type="text" name="nombre" value="{{ doctor.nombre }}"><br>
+        <input type="text" name="especialidad" value="{{ doctor.especialidad }}"><br>
+        <input type="text" name="telefono" value="{{ doctor.telefono }}"><br>
+        <input type="hidden" name="id" value="{{ doctor.id }}">
+        <input type="submit" value="Actualizar">
+    </form>
+    {% endfor %}
+</body>
+</html>

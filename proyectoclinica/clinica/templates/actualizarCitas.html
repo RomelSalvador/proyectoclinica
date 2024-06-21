@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Cita</title>
+</head>
+<body>
+    <h1>Actualizar Cita</h1>
+    <form method="post" action="/citas/modificar/{{ cita.id }}">
+        <input type="hidden" name="id" value="{{ cita.id }}">
+        <input type="date" id="fecha" name="fecha" value="{{ cita.fecha }}"><br>
+        <input type="time" id="hora" name="hora" value="{{ cita.hora }}"><br>
+        <input type="text" id="paciente" name="paciente" value="{{ cita.paciente_nombre }}"><br>
+        <input type="text" id="doctor" name="doctor" value="{{ cita.doctor_nombre }}"><br>
+        <input type="submit" value="Actualizar">
+    </form>
+</body>
+</html>

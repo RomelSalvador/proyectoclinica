@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctores</title>
+</head>
+<body>
+    <h1>Doctores</h1>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>especialidad</th>
+            <th>telefono</th>
+            <th>Acciones</th>
+        </tr>
+        {% for doctor in doctores %}
+        <tr>
+            <td>{{ doctor.id }}</td>
+            <td>{{ doctor.nombre }}</td>
+            <td>{{ doctor.especialidad }}</td>
+            <td>{{ doctor.telefono }}</td>
+            <td><a href="/doctores/actualizar/{{ doctor.id }}">Actualizar</a></td>
+            <td><a href="/doctores/eliminar/{{ doctor.id }}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/doctores/registrar/">Registrar Nuevo Doctor</a>
+</body>
+</html>

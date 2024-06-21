@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administradores</title>
+</head>
+<body>
+    <h1>Administradores</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre de Usuario</th>
+            <th>Password</th>
+            <th>Tipo</th>
+        </tr>
+        {% for administrador in administradores %}
+        <tr>
+            <td>{{ administrador.id }}</td>
+            <td>{{ administrador.username }}</td>
+            <td>{{ administrador.password }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
